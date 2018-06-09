@@ -12,7 +12,7 @@ xmlhttp.open("GET", "js/incidents.json", true);
 xmlhttp.send();
 // console.log(accidentsData);
 
-document.getElementById("demo").innerHTML = myObj[0].id;
+// document.getElementById("demo").innerHTML = myObj[0].id;
 
 
 // console.log(accidentsData);

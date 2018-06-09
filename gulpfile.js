@@ -47,16 +47,19 @@ gulp.task('sass', function() {
 
 gulp.task('concat-css', () => {
 	return gulp.src([
-		'app/css/sass/main.min.css',
-		'node_modules/@material/list/dist/mdc.list.min.css'
+		'app/css/main.min.css',
+		'node_modules/@material/list/dist/mdc.list.min.css',
+		'app/css/sass/main.css'
 	])
 			.pipe(concat('my.min.css'))
 			.pipe(cleanCSS())
-			.pipe(gulp.dest('app/css'));
+			.pipe(gulp.dest('app/css'))
+			.pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('watch', ['sass', 'concat-css', 'js', 'browser-sync'], function() {
 	gulp.watch('app/**/*.sass', ['sass']);
+	gulp.watch('app/**/*.css', ['concat-css'], browserSync.reload);
 	gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['js']);
 	gulp.watch('app/*.html', browserSync.reload);
 });
