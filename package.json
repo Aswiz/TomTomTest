@@ -19,5 +19,8 @@
     "gulp-sass": "^4.0.1",
     "gulp-uglify": "^3.0.0",
     "node-sass": "^4.8.3"
+  },
+  "dependencies": {
+    "@material/list": "^0.36.0"
   }
 }

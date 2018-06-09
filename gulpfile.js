@@ -45,7 +45,17 @@ gulp.task('sass', function() {
 	.pipe(browserSync.reload({stream: true}));
 });
 
-gulp.task('watch', ['sass', 'js', 'browser-sync'], function() {
+gulp.task('concat-css', () => {
+	return gulp.src([
+		'app/css/sass/main.min.css',
+		'node_modules/@material/list/dist/mdc.list.min.css'
+	])
+			.pipe(concat('my.min.css'))
+			.pipe(cleanCSS())
+			.pipe(gulp.dest('app/css'));
+});
+
+gulp.task('watch', ['sass', 'concat-css', 'js', 'browser-sync'], function() {
 	gulp.watch('app/**/*.sass', ['sass']);
 	gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['js']);
 	gulp.watch('app/*.html', browserSync.reload);

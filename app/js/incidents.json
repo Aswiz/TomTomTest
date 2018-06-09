@@ -49,5 +49,15 @@
     "details":"carriageway reduced to one lane",
     "delay":190,
     "magnitude":1
+  },
+  {
+    "id":"europe_HD_DE_TTL2",
+    "type":3,
+    "point": {"x":13.498329, "y":52.481859},
+    "from":"Blockdammweg (Rummelsburger Landstraße/L1075)",
+    "to":"Treskowallee - Edisonstraße (Rummelsburger Straße/L1075)",
+    "details":"carriageway reduced to one lane",
+    "delay":190,
+    "magnitude":1
   }
 ]

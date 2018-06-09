@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="085b411f-c967-4977-b186-3f5e81488db5" name="Default" comment="Initial Commit">
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/css/main.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/main.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/incidents.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/incidents.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/incidents.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/js/scripts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/scripts.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/sass/main.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/sass/main.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,11 +27,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="20" column="23" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="23" />
+            <state relative-caret-position="415">
+              <caret line="38" column="30" lean-forward="true" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mdc.list.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/@material/list/dist/mdc.list.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="332">
+              <caret line="105" selection-start-line="105" selection-end-line="115" />
             </state>
           </provider>
         </entry>
@@ -38,31 +48,27 @@
       <file leaf-file-name="main.sass" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/sass/main.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+            <state relative-caret-position="522">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="common.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/js/common.js">
+      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gulpfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="incidents.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/js/incidents.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="7" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="7" />
+            <state relative-caret-position="595">
+              <caret line="52" column="22" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>mdc-list-item</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -74,9 +80,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app/incidents.json" />
+        <option value="$PROJECT_DIR$/app/js/incidents.json" />
+        <option value="$PROJECT_DIR$/app/js/common.js" />
+        <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/app/sass/main.sass" />
         <option value="$PROJECT_DIR$/app/index.html" />
-        <option value="$PROJECT_DIR$/app/js/common.js" />
       </list>
     </option>
   </component>
@@ -94,7 +102,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="width" value="952" />
     <option name="height" value="1080" />
   </component>
@@ -106,6 +114,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -122,13 +131,14 @@
               <item name="TomTomTest" type="b2602c69:ProjectViewProjectNode" />
               <item name="TomTomTest" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TomTomTest" type="b2602c69:ProjectViewProjectNode" />
               <item name="TomTomTest" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="sass" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TomTomTest" type="b2602c69:ProjectViewProjectNode" />
@@ -136,11 +146,15 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="sass" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="TomTomTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TomTomTest" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -173,7 +187,8 @@
       <option name="presentableId" value="Default" />
       <updated>1528399989476</updated>
       <workItem from="1528399990675" duration="4149000" />
-      <workItem from="1528405070473" duration="5707000" />
+      <workItem from="1528405070473" duration="10519000" />
+      <workItem from="1528500338305" duration="3974000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1528400087941</created>
@@ -186,7 +201,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9856000" />
+    <option name="totallyTimeSpent" value="18642000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
@@ -194,21 +209,21 @@
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32955715" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49948508" visible="true" weight="0.15260416" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32955715" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5005149" side_tool="true" weight="0.114583336" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
     </layout>
@@ -216,21 +231,21 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="3" weight="0.32955715" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49948508" visible="true" weight="0.114583336" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Find" order="2" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="right" id="Database" order="0" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info anchor="bottom" id="Message" order="1" />
       <window_info id="Favorites" order="2" sideWeight="0.5005149" side_tool="true" weight="0.114583336" />
     </layout-to-restore>
   </component>
@@ -247,6 +262,50 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="6" lean-forward="true" selection-start-line="1" selection-start-column="5" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="42" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sass/main.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/css/main.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/incidents.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="26" column="52" lean-forward="true" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/img/TomTomLogo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/img/berlin_map.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
@@ -259,13 +318,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/incidents.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/incidents.json" />
     <entry file="file://$PROJECT_DIR$/app/img/bottle.png" />
     <entry file="file://$PROJECT_DIR$/app/img/favicon.ico">
       <provider selected="true" editor-type-id="images" />
@@ -275,13 +328,6 @@
     <entry file="file://$PROJECT_DIR$/app/img/web-design-icon.png" />
     <entry file="file://$PROJECT_DIR$/app/img/web-development.png" />
     <entry file="file://$PROJECT_DIR$/app/img/slider_bg.png" />
-    <entry file="file://$PROJECT_DIR$/app/css/main-header/main-header.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="26" selection-start-column="26" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/scripts.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-18">
@@ -289,50 +335,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/incidents.json">
+    <entry file="file://$PROJECT_DIR$/app/incidents.json" />
+    <entry file="file://$PROJECT_DIR$/app/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="4" column="10" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="10" />
+        <state relative-caret-position="306">
+          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/sass/_fonts.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8" />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/img/berlin_map.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/img/TomTomLogo.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/incidents.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="7" />
+        <state relative-caret-position="163">
+          <caret line="26" column="52" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/css/main-header/main-header.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="26" selection-start-column="26" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sass/_base.sass">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sass/_fonts.sass">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sass/_libs.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sass/_vars.sass">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sass/_media.sass">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/css/sass/main.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/main.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/css/main.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/css/my.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@material/list/dist/mdc.list.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="52" column="22" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/sass/main.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+        <state relative-caret-position="522">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@material/list/dist/mdc.list.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="105" selection-start-line="105" selection-end-line="115" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="23" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+        <state relative-caret-position="415">
+          <caret line="38" column="30" lean-forward="true" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
         </state>
       </provider>
     </entry>
