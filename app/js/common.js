@@ -1,109 +1,60 @@
-var myObj
+var test;
+function loadPhones() {
 
-var xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function() {
-	if (this.readyState == 4 && this.status == 200) {
-		myObj = JSON.parse(this.responseText);
-		// accidentsData = myObj;
-		console.log(myObj);
-	}
-};
-xmlhttp.open("GET", "js/incidents.json", true);
-xmlhttp.send();
+	var xhr = new XMLHttpRequest();
 
-function coutChildrens(element) {
-	for (var i = 0; i < element.childNodes.length; i++) {
-		console.log( element.childNodes[i] );
-	}
-}
+	xhr.open('GET', 'js/incidents.json', true);
 
-function searchLiElement(element) {
-	while (element.className.includes("mdc-list-item mdc-list-item_selected"))
-	{
-		if (element.className.includes("mdc-list-item mdc-list-item_selected"))
-			return element;
-		element=element.parentNode;
-		console.log(element);
-	}
-	return null;
-}
+	xhr.send();
 
-function isElementIncludesString(element, string) {
-	if ((element!==null)&&(element!==undefined))
-	{
-		if (element.className.includes(string))
-			return true;
-		else return false;
-	}
-	return false;
-}
+	xhr.onreadystatechange = function() {
+		if (xhr.readyState !== 4) return;
 
-function searchIconArrow(element) {
-// var i=1;
-// if (isElementIncludesString(element.childNodes[i],"mdc")) {
-// 	console.log(1);
-// }
-// console.log(element);
-	for (var i = 0; i < element.childNodes.length; i++) {
-		if (isElementIncludesString(element.childNodes[i], "mdc-list-item__meta material-icons md-48")) {
-			console.log(1);
-			console.log(element);
+		if (xhr.status !== 200) {
+			// обработать ошибку
+			alert( xhr.status + ': ' + xhr.statusText );
+		} else {
+			try {
+				var phones = JSON.parse(xhr.responseText);
+			} catch (e) {
+				alert( "Некорректный ответ " + e.message );
+			}
+			createLiElements(phones);
 		}
-	}
-	// if (element.childNodes[i].className.includes("mdc"))
-	// 	console.log("True");
-	// while(isElementIncludesString(element,"mdc-list-item__meta material-icons md-48"))
-	// {
-	// 	i++;
-	// }
-	return element.childNodes[i];
-}
-function handler(event) {
-	console.log("Кнопка нажата.");
-	var liElement = searchLiElement(event.target);
-	console.log("liElement = ");
-	console.log(liElement);
-
-	// var IconArrow = searchIconArrow(liElement);
-	// console.log(IconArrow);
-	// changedHeight(liElement);
-	// changingIcon(IconArrow);
-}
-function changedHeight(element) {
-	if (element.className==="mdc-list-item_selected")
-		element.classList.remove("mdc-list-item_selected");
-	// if (element.className!=="mdc-list-item_selected")
-	// 	element.classList.add("mdc-list-item_selected");
-
-	console.log(element.classList);
-}
-function changingIcon(element) {
-	switch (element.textContent){
-		case "clear":
-			element.textContent = "arrow_drop_down";
-			break;
-		case "arrow_drop_down":
-				element.textContent = "clear";
-		break;
-	}
+	};
 }
 
+loadPhones();
+//
+//
+//
+function createLiElement(element) {
+	var liElement = document.createElement('li');
+	liElement.className = "mdc-list-item mdc-list-item_selected";
+	liElement.innerHTML = "<span class=\"mdc-list-item__graphic material-icons md-36 orange600\" aria-hidden=\"true\">error</span>\n" +
+			"<span class=\"mdc-list-item__text\">" + element.details + " on " + element.from + "\n" +
+			"<span class=\"mdc-list-item__secondary-text\">" + element.id + "</span>\n" +
+			"<span class=\"mdc-list-item__secondary-text\">Type : " + element.type + "</span>\n" +
+			"<span class=\"mdc-list-item__secondary-text\">Position : x: " + element.point.x + ", y: " + element.point.y + "</span>\n" +
+			"<span class=\"mdc-list-item__secondary-text\">From: " + element.from + "</span>\n" +
+			"<span class=\"mdc-list-item__secondary-text\">To: " + element.to + "</span>\n" +
+			"<span class=\"mdc-list-item__secondary-text\">Details: " + element.details + "</span>\n" +
+			"<span class=\"mdc-list-item__secondary-text\">Delay: " + element.delay + "</span>\n" +
+			"<span class=\"mdc-list-item__secondary-text\">Magnitude: " + element.magnitude + "</span>\n" +
+			"</span>\n" +
+			"<span class=\"mdc-list-item__meta material-icons md-48\" aria-hidden=\"true\">clear</span>";
+	return liElement;
+}
+function createLiElements(element) {
+	var ulElement = document.getElementById("accidentsList");
+	var liElement;
+	element.forEach(function(elementI){
+		console.log(elementI);
+		liElement = createLiElement(elementI);
+		ulElement.insertBefore(liElement,ulElement.firstChild);
+	});
 
 
 
-
-var icon_selector = document.querySelector(".mdc-list");
-
-
-icon_selector.addEventListener("click", handler);
-
-
-// console.log(accidentsData);
-
-// document.getElementById("demo").innerHTML = myObj[0].id;
-// function myFunction() {
-// 	document.getElementById("demo").innerHTML = "Paragraph changed!";
-// }
-
-// console.log(accidentsData);
-
+	console.log(element[0].id);
+}
