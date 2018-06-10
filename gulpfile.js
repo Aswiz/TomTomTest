@@ -27,11 +27,11 @@ gulp.task('browser-sync', function() {
 gulp.task('js', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
-		'app/js/common.js', // Всегда в конце
+		'app/js/*.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))
 	.pipe(uglify()) // Минимизировать весь js (на выбор)
-	.pipe(gulp.dest('app/js'))
+	.pipe(gulp.dest('app/js/minJs'))
 	.pipe(browserSync.reload({stream: true}));
 });
 
@@ -60,7 +60,7 @@ gulp.task('concat-css', () => {
 gulp.task('watch', ['sass', 'concat-css', 'js', 'browser-sync'], function() {
 	gulp.watch('app/**/*.sass', ['sass']);
 	gulp.watch('app/**/*.css', ['concat-css'], browserSync.reload);
-	gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['js']);
+	gulp.watch(['libs/**/*.js', 'app/js/*.js'], ['js']);
 	gulp.watch('app/*.html', browserSync.reload);
 });
 
