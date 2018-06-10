@@ -33,7 +33,8 @@ function createLiElement(element) {
 			"<span class=\"mdc-list-item__secondary-text secondary-text__hidden\">Delay: " + element.delay + "</span>\n" +
 			"<span class=\"mdc-list-item__secondary-text secondary-text__hidden\">Magnitude: " + element.magnitude + "</span>\n" +
 			"</span>\n" +
-			"<span class=\"mdc-list-item__meta material-icons md-48\" aria-hidden=\"true\">arrow_drop_down</span>";
+			"<span class=\"mdc-list-item__meta material-icons md-36\" aria-hidden=\"true\">arrow_drop_down</span>";
+	liElement.onclick = changeState;
 	return liElement;
 }
 function createLiElements(element) {

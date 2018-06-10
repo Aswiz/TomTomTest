@@ -11,11 +11,8 @@ function changeIconToClear(spanIconElement) {
 	spanIconElement.innerHTML = "clear";
 }
 
-function showDetails() {
-	var i = 0,
-			acctidentsList = document.getElementById("accidentsList"),
-			selectedLiElement = acctidentsList.childNodes[0],
-			hiddenSpans = selectedLiElement.childNodes[2],
+function showDetails(selectedLiElement) {
+	var hiddenSpans = selectedLiElement.childNodes[2],
 			iconSpan = selectedLiElement.childNodes[4];
 
 	addSelectedClass(selectedLiElement);
@@ -38,11 +35,8 @@ function changeIconToArrow(spanIconElement) {
 	spanIconElement.innerHTML = "arrow_drop_down";
 }
 
-function hideDetails() {
-	var i = 0,
-			acctidentsList = document.getElementById("accidentsList"),
-			selectedLiElement = acctidentsList.childNodes[0],
-			hiddenSpans = selectedLiElement.childNodes[2],
+function hideDetails(selectedLiElement) {
+	var hiddenSpans = selectedLiElement.childNodes[2],
 			iconSpan = selectedLiElement.childNodes[4];
 
 	removeSelectedClass(selectedLiElement);
@@ -52,3 +46,17 @@ function hideDetails() {
 
 
 loadAccidents();
+
+function changeState() {
+	if (this.classList.contains("mdc-list-item_selected"))
+		hideDetails(this);
+	else
+		showDetails(this);
+}
+
+function test() {
+	var acctidentsList = document.getElementById("accidentsList"),
+			selectedLiElement = acctidentsList.childNodes[0];
+	console.log(selectedLiElement);
+	selectedLiElement.onclick = showDetails;
+}
