@@ -8,35 +8,46 @@ body
 .main-header
 	text-align: center
 	line-height: 2
+	margin: 0
 
 .TomTomLogo
 	width: 125px
 	display: inline-block
-
-.map
-	display: flex
-	width: 100%
-	&-container
-		width: 60%
-		margin: 0 auto
-	&-img
-		width: 100%
-
-.accidents
-	background-color: #FFF
-	&-title
-		text-align: center
-	&-container
-		width: 60%
-		margin: 0 auto
 
 .accidents-container
 	.mdc-list
 		.mdc-list-item_selected
 			height: 210px
 
-
-
 .secondary-text__hidden
 	display: none
+
+
+.app-container
+	display: flex
+	justify-content: flex-start
+	align-content: flex-start
+	flex-wrap: nowrap
+
+.accidents
+	flex-basis: 410px
+	width: 25%
+	//max-width: 410px
+	&-title
+		text-align: center
+
+.map
+	flex-basis: 100%
+	&-img
+		width: 100%
+
+
+
+
+
+
+
+
+
+
 @import "media" // Always in the bottom
