@@ -36,7 +36,7 @@ function colorIcon(type)
 	switch (type){
 		case "warning": color = "#F06400"; break;
 		case "error": color = "#C30000"; break;
-		case "location_off": color = "#EFEA00"; break;
+		case "location_off": color = "#0200AB"; break;
 		default:
 			color = "#000000";
 	}
@@ -67,6 +67,7 @@ function createLiElement(element) {
 function createLiElements(element) {
 	var ulElement = document.getElementById("accidentsList");
 	var liElement;
+	sortingAccidentList(element);
 	element.forEach(function(elementI){
 		liElement = createLiElement(elementI);
 		ulElement.insertBefore(liElement,ulElement.firstChild);

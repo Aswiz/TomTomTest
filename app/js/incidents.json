@@ -52,12 +52,22 @@
   },
   {
     "id":"europe_HD_DE_TTL2",
-    "type":3,
-    "point": {"x":13.498329, "y":52.481859},
+    "type":2,
+    "point": {"x":13.0361924, "y":52.5686342},
     "from":"Blockdammweg (Rummelsburger Landstraße/L1075)",
     "to":"Treskowallee - Edisonstraße (Rummelsburger Straße/L1075)",
     "details":"carriageway reduced to one lane",
     "delay":190,
+    "magnitude":1
+  },
+  {
+    "id":"europe_HD_DE_TTL444",
+    "type":3,
+    "point": {"x":13.561924, "y":52.5686342},
+    "from":"Blockdammweg (Rummelsburger Landstraße/L1075)",
+    "to":"Treskowallee - Edisonstraße (Rummelsburger Straße/L1075)",
+    "details":"carriageway reduced to one lane",
+    "delay":1,
     "magnitude":1
   }
 ]
