@@ -30,6 +30,19 @@ function typeAccidents(element) {
 	}
 	return type;
 }
+function colorIcon(type)
+{
+	var color;
+	switch (type){
+		case "warning": color = "#F06400"; break;
+		case "error": color = "#C30000"; break;
+		case "location_off": color = "#EFEA00"; break;
+		default:
+			color = "#000000";
+	}
+	return color;
+}
+
 function createLiElement(element) {
 
 	var typeLiSpan = typeAccidents(element);

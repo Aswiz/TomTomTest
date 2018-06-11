@@ -20,11 +20,14 @@ function canvas(accidents) {
 	ctx.drawImage(img, 0, 0, maxWidthPx*scale_img, maxHeightPx*scale_img);
 
 
-	ctx.font = "36px Material Icons";
 	accidents.forEach(function (element,i) {
 		positionIcon = calculatedPositon(accidents[i]);
-		var typeIcon = typeAccidents(accidents[i]);
+		var typeIcon = typeAccidents(accidents[i]),
+				iconColor = colorIcon(typeIcon);
+		ctx.font = "36px Material Icons";
+		ctx.fillStyle = iconColor;
 		ctx.fillText(typeIcon, positionIcon.x*scale_img,positionIcon.y*scale_img);
+		console.log(iconColor);
 	});
 
 }
