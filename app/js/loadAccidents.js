@@ -12,18 +12,31 @@ function loadAccidents() {
 			try {
 				var accidents = JSON.parse(xhr.responseText);
 				createLiElements(accidents);
+				canvas(accidents);
 			} catch (e) {
 				alert( "Error " + e.message );
 			}
 		}
 	};
 }
-
+function typeAccidents(element) {
+	var type;
+	switch (element.type){
+		case 1: type = "error"; break;
+		case 2: type = "warning"; break;
+		case 3: type = "location_off"; break;
+		default:
+			type = "clear";
+	}
+	return type;
+}
 function createLiElement(element) {
-	var liElement = document.createElement('li');
-	liElement.className = "mdc-list-item";
-	liElement.innerHTML =
-			"<span class=\"mdc-list-item__graphic material-icons md-36 orange600\" aria-hidden=\"true\">error</span>\n" +
+
+	var typeLiSpan = typeAccidents(element);
+			liElement = document.createElement('li');
+			liElement.className = "mdc-list-item";
+			liElement.innerHTML =
+			"<span class=\"mdc-list-item__graphic material-icons md-36 orange600\" aria-hidden=\"true\">" + typeLiSpan + "</span>\n" +
 			"<span class=\"mdc-list-item__text\">" + element.details + " on " + element.from + "\n" +
 			"<span class=\"mdc-list-item__secondary-text\">" + element.id + "</span>\n" +
 			"<span class=\"mdc-list-item__secondary-text secondary-text__hidden\">Type : " + element.type + "</span>\n" +
