@@ -13,16 +13,17 @@ function canvas(accidents) {
 	var canvas = document.getElementById("canvas_map"),
 			ctx = canvas.getContext("2d"),
 			img = document.getElementById("img"),
-			scale_img = window.innerWidth / maxWidthPx;
-	canvas.width = window.innerWidth;
+			scale_img = window.innerWidth / maxWidthPx * 0.75;
+	canvas.width = window.innerWidth * 0.75;
 	canvas.height = maxHeightPx * scale_img;
 	ctx.drawImage(img, 0, 0, maxWidthPx*scale_img, maxHeightPx*scale_img);
 
 	accidents.forEach(function (element,i) {
 		positionIcon = calculatedPositon(accidents[i]);
 		var typeIcon = typeAccidents(accidents[i]),
-				iconColor = colorIcon(typeIcon);
-		ctx.font = "36px Material Icons";
+				iconColor = colorIcon(typeIcon),
+				fontSize = 36 * scale_img*2 + "px";
+		ctx.font = fontSize + " Material Icons";
 		ctx.fillStyle = iconColor;
 		ctx.fillText(typeIcon, positionIcon.x*scale_img,positionIcon.y*scale_img);
 	});
