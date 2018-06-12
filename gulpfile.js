@@ -26,7 +26,7 @@ gulp.task('browser-sync', function() {
 // Минификация пользовательских скриптов проекта и JS библиотек в один файл
 gulp.task('js', function() {
 	return gulp.src([
-		'app/libs/jquery/dist/jquery.min.js',
+		// 'app/libs/jquery/dist/jquery.min.js',
 		'app/js/*.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))

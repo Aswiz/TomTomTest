@@ -10,12 +10,12 @@ function canvas(accidents) {
 			maxHeightPx = 1560;
 			// WxPx = 1609,
 			// HxPx = 790;
-	var canvas = document.getElementById("canvas_map");
-	canvas.width = window.screen.availWidth*0.75;
-	canvas.height = window.screen.availHeight*0.80;
-	var ctx = canvas.getContext("2d");
-	var img = document.getElementById("img"),
-			scale_img = 0.465;
+	var canvas = document.getElementById("canvas_map"),
+			ctx = canvas.getContext("2d"),
+			img = document.getElementById("img"),
+			scale_img = window.innerWidth / maxWidthPx;
+	canvas.width = window.innerWidth;
+	canvas.height = maxHeightPx * scale_img;
 	ctx.drawImage(img, 0, 0, maxWidthPx*scale_img, maxHeightPx*scale_img);
 
 	accidents.forEach(function (element,i) {

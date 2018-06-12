@@ -12,10 +12,22 @@
 	/**/
 
 /* Small Devices, Tablets */
-@media only screen and (max-width : 768px)
+//@media only screen and (max-width : 768px)
+@media only screen and (max-width : 992px)
 	.app-container
 		flex-wrap: wrap
-	.accidents
+		width: 100%
+	.app
+		width: 100%
+		&-accidents
+			width: 100%
+			flex-basis: 100%
+			order: 2
+		&-map
+			width: 100%
+			flex-basis: 100%
+			order: 1
+	.map_canvas
 		width: 100%
 
 
