@@ -12,12 +12,15 @@ function loadAccidents() {
 			try {
 				var accidents = JSON.parse(xhr.responseText);
 				createLiElements(accidents);
-				canvas(accidents);
+				var canvas = new Canvas();
+				canvas.clear();
+				canvas.startDraw(accidents);
 			} catch (e) {
 				alert( "Error " + e.message );
 			}
 		}
 	};
+	console.log("Load!");
 }
 function typeAccidents(element) {
 	var type;
@@ -63,6 +66,20 @@ function createLiElement(element) {
 			"<span class=\"mdc-list-item__meta material-icons md-36\" aria-hidden=\"true\">arrow_drop_down</span>";
 	liElement.onclick = changeState;
 	return liElement;
+}
+
+function deleteLiElements() {
+	var ulElement = document.getElementById("accidentsList"),
+			countLiElements = ulElement.children.length;
+
+	for (var i = 0; i < countLiElements; i++)
+	{
+		ulElement.removeChild(ulElement.children[0]);
+	}
+	var canvas = new Canvas();
+	canvas.clearIcons();
+	console.log(countLiElements);
+
 }
 function createLiElements(element) {
 	var ulElement = document.getElementById("accidentsList");
