@@ -11,10 +11,7 @@ function loadAccidents() {
 		} else {
 			try {
 				var accidents = JSON.parse(xhr.responseText);
-				createLiElements(accidents);
-				var canvas = new Canvas();
-				canvas.clear();
-				canvas.startDraw(accidents);
+				draw(accidents);
 			} catch (e) {
 				alert( "Error " + e.message );
 			}
@@ -22,6 +19,27 @@ function loadAccidents() {
 	};
 	console.log("Load!");
 }
+
+function draw(accidents) {
+	deleteLiElements();
+	createLiElements(accidents);
+	var canvas = new Canvas();
+	canvas.clear();
+	canvas.startDraw(accidents);
+	setTimeout(function () {
+		canvas.clearIcons();
+		canvas.drawIcons(accidents);
+	},10);
+
+
+
+	var materialIcons = document.getElementById("material-icons");
+	materialIcons.addEventListener("load", function(event) {
+		console.log("All ICON resources finished loading!");
+
+	});
+}
+
 function typeAccidents(element) {
 	var type;
 	switch (element.type){
@@ -37,8 +55,8 @@ function colorIcon(type)
 {
 	var color;
 	switch (type){
-		case "warning": color = "#F06400"; break;
-		case "error": color = "#C30000"; break;
+		case "warning": color = "#C30000"; break;
+		case "error": color = "#A423FF"; break;
 		case "location_off": color = "#0200AB"; break;
 		default:
 			color = "#000000";

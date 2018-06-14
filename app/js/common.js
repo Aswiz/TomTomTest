@@ -14,10 +14,10 @@ function test() {
 		console.log("All resources finished loading!");
 		loadAccidents();
 	});
-	materialIcons.addEventListener("load", function(event) {
-		console.log("All resources finished loading!");
-		loadAccidents();
-	});
+	// materialIcons.addEventListener("load", function(event) {
+	// 	console.log("All ICON resources finished loading!");
+	// 	loadAccidents();
+	// });
 }
 
 test();
