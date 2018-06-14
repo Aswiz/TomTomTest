@@ -17,7 +17,7 @@ function loadAccidents() {
 			}
 		}
 	};
-	console.log("Load!");
+	// console.log("Load!");
 }
 
 function draw(accidents) {
@@ -96,7 +96,7 @@ function deleteLiElements() {
 	}
 	var canvas = new Canvas();
 	canvas.clearIcons();
-	console.log(countLiElements);
+	// console.log(countLiElements);
 
 }
 function createLiElements(element) {

@@ -49,7 +49,8 @@ gulp.task('concat-css', () => {
 	return gulp.src([
 		'node_modules/@material/list/dist/mdc.list.min.css',
 		'app/css/main.min.css',
-		'app/css/sass/main.css'
+		'app/css/sass/main.css',
+		'app/css/sass/loader.css'
 	])
 			.pipe(concat('my.min.css'))
 			.pipe(cleanCSS())
