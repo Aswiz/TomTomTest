@@ -5,20 +5,38 @@
 
 body
 	background-color: #ffffff
+
 .main-header
-	text-align: center
-	line-height: 2
-	margin: 0
-.TomTomLogo
-	width: 125px
-	display: inline-block
+	&__h1
+		text-align: center
+		line-height: 2
+		margin: 0
+	&__TomTomLogo
+		width: 125px
+		display: inline-block
 
+#loader
 
+.app
+	width: 100%
+	&__container
+		display: flex
+		justify-content: flex-start
+		align-content: flex-start
+		flex-wrap: nowrap
 
-.accidents-container
-	.mdc-list
-		.mdc-list-item_selected
-			height: 210px
+.app
+	&__accidents
+		flex-basis: 25%
+		width: 25%
+		overflow-y: scroll
+		max-height: 710px
+	&__accidents-container
+		.mdc-list
+			.mdc-list-item_selected
+				height: 210px
+	&__accidents-title
+		text-align: center
 
 .mdc-list-item
 	transition: .25s
@@ -26,25 +44,22 @@ body
 .secondary-text__hidden
 	display: none
 
-.app-container
-	display: flex
-	justify-content: flex-start
-	align-content: flex-start
-	flex-wrap: nowrap
 
 .app
-	width: 100%
-	&-accidents
-		flex-basis: 25%
-		width: 25%
-		overflow-y: scroll
-		max-height: 710px
-	&-map
+	&__map
 		flex-basis: 75%
-.accidents-title
-	text-align: center
+	&__map-container
 
-#img
-	height: 0
+.svgIcon
+.svgIconUnSelected
+	fill: #DF1A26
+.svgIconUnSelected:hover
+		cursor: pointer
+		fill: #F91A29
+.svgIconSelected
+	fill: #02A2A5
+
+.svgIconPath:hover
+	fill: #F91A29
 
 @import "media" // Always in the bottom

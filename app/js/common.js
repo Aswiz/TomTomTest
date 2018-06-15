@@ -1,11 +1,11 @@
-setInterval(function(){
-	deleteLiElements();
-	loadAccidents();
-},120000);
+// setInterval(function(){
+// 	deleteLiElements();
+// 	loadAccidents();
+// },120000);
 
 function showPage() {
 	document.getElementById("loader").style.display = "none";
-	document.getElementById("headTitle").style.display = "block";
+	document.getElementById("main-header").style.display = "block";
 	document.getElementById("app").style.display = "block";
 }
 

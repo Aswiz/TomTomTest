@@ -60,9 +60,13 @@ function createSvgIcon(liElement, i) {
 	{
 		scale_img = window.innerWidth / maxWidthPx;
 		IconSize = 36 * scale_img*3;
-
 	}
-	else  if (window.innerWidth>=2000)
+	if (window.innerWidth <= 800)
+	{
+		scale_img = window.innerWidth / maxWidthPx;
+		IconSize = 36 * scale_img*5;
+	}
+	if (window.innerWidth>=2000)
 		IconSize = 36 * scale_img*2;
 
 	var rings = document.getElementById("rings");
@@ -71,8 +75,8 @@ function createSvgIcon(liElement, i) {
 
 	var svgIcon;
 	svgIcon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-	svgIcon.className = "svgIcon";
 	svgIcon.id = "svgIcon" + i;
+	svgIcon.classList += " svgIcon";
 	svgIcon.setAttribute("xmlns", "http://www.w3.org/2000/svg");
 	svgIcon.setAttribute("width", IconSize);
 	svgIcon.setAttribute("height", IconSize);
@@ -98,10 +102,10 @@ function changeColorSvgIcons(i) {
 	}
 	for (var j = 2; j < countIcons + 2; j++)
 	{
-		svgMap.children[j].children[1].setAttribute("fill","#DF1A26");
+		svgMap.children[j].children[1].setAttribute("class","svgIcon svgIconUnSelected");
 	}
 
-	svgMap.children[i+2].children[1].setAttribute("fill","#02A2A5");
+	svgMap.children[i+2].children[1].setAttribute("class","svgIcon svgIconSelected");
 
 	var rings  = document.getElementById("rings");
 	var svgMapH = Math.round(svgMap.children[i+2].getAttribute("height")),
@@ -119,10 +123,10 @@ function typeSvgIcon(type)
 {
 	var svgIconPath,
 			Path = "<path d=\"M0 0h24v24H0z\" fill=\"none\"></path>",
-			error = "<path d=\"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z\" fill=\"#DF1A26\" stroke='rgba(0, 0, 0, 0.2)'></path>",
+			error = "<path class='svgIcon svgIconUnSelected' d=\"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z\" fill=\"#DF1A26\" stroke='rgba(0, 0, 0, 0.2)'></path>",
 			remove_circle = "<path d=\"M0 0h24v24H0zm11.75 11.47l-.11-.11z\" fill=\"none\"/></path>\n" +
-											"<path fill=\"#DF1A26\" stroke='rgba(0, 0, 0, 0.25)' d=\"M12 6.5c1.38 0 2.5 1.12 2.5 2.5 0 .74-.33 1.39-.83 1.85l3.63 3.63c.98-1.86 1.7-3.8 1.7-5.48 0-3.87-3.13-7-7-7-1.98 0-3.76.83-5.04 2.15l3.19 3.19c.46-.52 1.11-.84 1.85-.84zm4.37 9.6l-4.63-4.63-.11-.11L3.27 3 2 4.27l3.18 3.18C5.07 7.95 5 8.47 5 9c0 5.25 7 13 7 13s1.67-1.85 3.38-4.35L18.73 21 20 19.73l-3.63-3.63z\"></path>",
-			report_problem = "<path d=\"M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z\" fill=\"#DF1A26\" stroke='rgba(0, 0, 0, 0.3)'></path>";
+											"<path class='svgIcon svgIconUnSelected' fill=\"#DF1A26\" stroke='rgba(0, 0, 0, 0.25)' d=\"M12 6.5c1.38 0 2.5 1.12 2.5 2.5 0 .74-.33 1.39-.83 1.85l3.63 3.63c.98-1.86 1.7-3.8 1.7-5.48 0-3.87-3.13-7-7-7-1.98 0-3.76.83-5.04 2.15l3.19 3.19c.46-.52 1.11-.84 1.85-.84zm4.37 9.6l-4.63-4.63-.11-.11L3.27 3 2 4.27l3.18 3.18C5.07 7.95 5 8.47 5 9c0 5.25 7 13 7 13s1.67-1.85 3.38-4.35L18.73 21 20 19.73l-3.63-3.63z\"></path>",
+			report_problem = "<path class='svgIcon svgIconUnSelected' d=\"M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z\" fill=\"#DF1A26\" stroke='rgba(0, 0, 0, 0.3)'></path>";
 	switch (type){
 		case "warning": svgIconPath = Path + report_problem; break;
 		case "error": svgIconPath = Path + error; break;

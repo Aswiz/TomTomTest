@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 	<meta charset="utf-8">
-	<title>TomTom</title>
+	<title>TomTomTest</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
@@ -11,41 +11,32 @@
 </head>
 
 <body>
-<div class="headTitle" id="headTitle" style="display: none">
-	<h1 class="main-header"><img src="img/TomTomLogo.png" alt="TomTom Logo" class="TomTomLogo"> Test :)</h1>
-</div>
+<section class="main-header" id="main-header" style="display: none">
+	<h1 class="main-header__h1"><img src="img/TomTomLogo.png" alt="TomTom Logo" class="main-header__TomTomLogo"> Test :)</h1>
+</section>
 
 <svg id="loader" width="200px"  height="200px"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="lds-double-ring" style="background: none;"><circle cx="50" cy="50" ng-attr-r="{{config.radius}}" ng-attr-stroke-width="{{config.width}}" ng-attr-stroke="{{config.c1}}" ng-attr-stroke-dasharray="{{config.dasharray}}" fill="none" stroke-linecap="round" r="40" stroke-width="4" stroke="#ed1c24" stroke-dasharray="62.83185307179586 62.83185307179586" transform="rotate(309 50 50)"><animateTransform attributeName="transform" type="rotate" calcMode="linear" values="0 50 50;360 50 50" keyTimes="0;1" dur="2s" begin="0s" repeatCount="indefinite"></animateTransform></circle><circle cx="50" cy="50" ng-attr-r="{{config.radius2}}" ng-attr-stroke-width="{{config.width}}" ng-attr-stroke="{{config.c2}}" ng-attr-stroke-dasharray="{{config.dasharray2}}" ng-attr-stroke-dashoffset="{{config.dashoffset2}}" fill="none" stroke-linecap="round" r="35" stroke-width="4" stroke="#555555" stroke-dasharray="54.97787143782138 54.97787143782138" stroke-dashoffset="54.97787143782138" transform="rotate(-309 50 50)"><animateTransform attributeName="transform" type="rotate" calcMode="linear" values="0 50 50;-360 50 50" keyTimes="0;1" dur="2s" begin="0s" repeatCount="indefinite"></animateTransform></circle></svg>
 
 <section class="app" id="app" style="display: none">
-	<div class="app-container">
-
-		<div class="app-accidents">
-			<div class="accidents-container">
-				<h2 class="accidents-title">Road accidents in Berlin</h2>
-				<div id="demo"></div>
+	<div class="app__container">
+		<div class="app__accidents">
+			<div class="app__accidents-container">
+				<h2 class="app__accidents-title">Road accidents in Berlin</h2>
 				<ul class="mdc-list demo-list mdc-list--two-line mdc-list--avatar-list" aria-orientation="vertical"
 				    id="accidentsList">
-					<!--<li class="mdc-list-divider"></li>-->
 				</ul>
 			</div>
 		</div>
-		<div class="app-map" id="app-map">
-			<div class="map-container">
+		<div class="app__map" id="app__map">
+			<div class="app__map-container">
 				<svg id="svgMap" class="svgMap">
-					<image xlink:href="img/berlin_map.png" height="0" width="0" id="svgMapBackground"/>
-					<image style="display: none" xlink:href="img/rings.svg" id="rings"/>
+					<image xlink:href="img/berlin_map.png" height="0" width="0" id="svgMapBackground"></image>
+					<image style="display: none" xlink:href="img/rings.svg" id="rings"></image>
 				</svg>
-
 			</div>
 		</div>
-
 	</div>
-
 </section>
-
-
-<img src="img/berlin_map.png" alt="" id="img">
 
 <link rel="stylesheet" href="css/my.min.css">
 <script src="js/minJs/scripts.min.js"></script>
