@@ -1,8 +1,7 @@
-// window.onload = loadAccidents();
 setInterval(function(){
 	deleteLiElements();
 	loadAccidents();
-},160000);
+},120000);
 
 function showPage() {
 	document.getElementById("loader").style.display = "none";
@@ -10,24 +9,22 @@ function showPage() {
 	document.getElementById("app").style.display = "block";
 }
 
-function test() {
-	var image = document.getElementById("img"),
-			materialIcons = document.getElementById("material-icons");
+function draw(accidents) {
+	deleteLiElements();
+	createLiElements(accidents);
+	SvgMap();
+	deleteSvgIcons();
+	createSvgIcons(accidents);
+}
 
-	image.addEventListener("load", function(event) {
-		// console.log("All resources finished loading!");
+
+function test() {
+	window.addEventListener("load", function(event) {
 		loadAccidents();
+
 		setTimeout(function () {
 			showPage();
 		},500);
 	});
-
-
-
-	// materialIcons.addEventListener("load", function(event) {
-	// 	console.log("All ICON resources finished loading!");
-	// 	loadAccidents();
-	// });
 }
-
 test();

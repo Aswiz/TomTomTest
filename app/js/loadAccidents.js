@@ -17,27 +17,6 @@ function loadAccidents() {
 			}
 		}
 	};
-	// console.log("Load!");
-}
-
-function draw(accidents) {
-	deleteLiElements();
-	createLiElements(accidents);
-	var canvas = new Canvas();
-	canvas.clear();
-	canvas.startDraw(accidents);
-	setTimeout(function () {
-		canvas.clearIcons();
-		canvas.drawIcons(accidents);
-	},10);
-
-
-
-	var materialIcons = document.getElementById("material-icons");
-	materialIcons.addEventListener("load", function(event) {
-		console.log("All ICON resources finished loading!");
-
-	});
 }
 
 function typeAccidents(element) {
@@ -51,25 +30,33 @@ function typeAccidents(element) {
 	}
 	return type;
 }
-function colorIcon(type)
-{
-	var color;
-	switch (type){
-		case "warning": color = "#C30000"; break;
-		case "error": color = "#A423FF"; break;
-		case "location_off": color = "#0200AB"; break;
-		default:
-			color = "#000000";
+
+function createLiElements(element) {
+	var ulElement = document.getElementById("accidentsList");
+	var liElement;
+	sortingAccidentList(element);
+	element.forEach(function(elementI){
+		liElement = createLiElement(elementI);
+		ulElement.insertBefore(liElement,ulElement.firstChild);
+	});
+}
+
+function deleteLiElements() {
+	var ulElement = document.getElementById("accidentsList"),
+			countLiElements = ulElement.children.length;
+
+	for (var i = 0; i < countLiElements; i++)
+	{
+		ulElement.removeChild(ulElement.children[0]);
 	}
-	return color;
 }
 
 function createLiElement(element) {
 
 	var typeLiSpan = typeAccidents(element);
-			liElement = document.createElement('li');
-			liElement.className = "mdc-list-item";
-			liElement.innerHTML =
+	liElement = document.createElement('li');
+	liElement.className = "mdc-list-item";
+	liElement.innerHTML =
 			"<span class=\"mdc-list-item__graphic material-icons md-36 orange600\" aria-hidden=\"true\">" + typeLiSpan + "</span>\n" +
 			"<span class=\"mdc-list-item__text\">" + element.details + " on " + element.from + "\n" +
 			"<span class=\"mdc-list-item__secondary-text\">" + element.id + "</span>\n" +
@@ -84,27 +71,4 @@ function createLiElement(element) {
 			"<span class=\"mdc-list-item__meta material-icons md-36\" aria-hidden=\"true\">arrow_drop_down</span>";
 	liElement.onclick = changeState;
 	return liElement;
-}
-
-function deleteLiElements() {
-	var ulElement = document.getElementById("accidentsList"),
-			countLiElements = ulElement.children.length;
-
-	for (var i = 0; i < countLiElements; i++)
-	{
-		ulElement.removeChild(ulElement.children[0]);
-	}
-	var canvas = new Canvas();
-	canvas.clearIcons();
-	// console.log(countLiElements);
-
-}
-function createLiElements(element) {
-	var ulElement = document.getElementById("accidentsList");
-	var liElement;
-	sortingAccidentList(element);
-	element.forEach(function(elementI){
-		liElement = createLiElement(elementI);
-		ulElement.insertBefore(liElement,ulElement.firstChild);
-	});
 }
