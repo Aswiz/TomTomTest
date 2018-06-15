@@ -1,7 +1,8 @@
-// setInterval(function(){
-// 	deleteLiElements();
-// 	loadAccidents();
-// },120000);
+setInterval(function(){
+	var rings = document.getElementById('rings');
+	rings.setAttribute("style", "display: none;");
+	loadAccidents();
+},120000);
 
 function showPage() {
 	document.getElementById("loader").style.display = "none";
@@ -10,16 +11,21 @@ function showPage() {
 }
 
 function draw(accidents) {
-	deleteLiElements();
-	createLiElements(accidents);
-	SvgMap();
-	deleteSvgIcons();
-	createSvgIcons(accidents);
+	try {
+		deleteLiElements();
+		createLiElements(accidents);
+		deleteSvgIcons();
+		createSvgIcons(accidents);
+	}
+	catch (e) {
+		console.log(e);
+	}
 }
 
 
 function test() {
 	window.addEventListener("load", function(event) {
+		SvgMap();
 		loadAccidents();
 
 		setTimeout(function () {

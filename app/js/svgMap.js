@@ -29,7 +29,7 @@ function deleteSvgIcons() {
 
 	for (var i = 0; i < countIcons - 2; i++)
 	{
-			svgMap.removeChild(svgMap.children[1]);
+			svgMap.removeChild(svgMap.children[2]);
 	}
 }
 
@@ -53,8 +53,6 @@ function createSvgIcon(liElement, i) {
 			maxHeightPx = 1560,
 			scale_img = window.innerWidth / maxWidthPx * 0.75,
 			IconSize = 36 * scale_img*2.5;
-
-
 
 	if (window.innerWidth <= 1200)
 	{
@@ -107,7 +105,7 @@ function changeColorSvgIcons(i) {
 
 	svgMap.children[i+2].children[1].setAttribute("class","svgIcon svgIconSelected");
 
-	var rings  = document.getElementById("rings");
+	var rings  = document.getElementById('rings');
 	var svgMapH = Math.round(svgMap.children[i+2].getAttribute("height")),
 			svgMapW = Math.round(svgMap.children[i+2].getAttribute("width")),
 			ringsX = svgMap.children[i+2].getAttribute("x") - svgMapW/2 - 0.5,
@@ -115,7 +113,7 @@ function changeColorSvgIcons(i) {
 
 	rings.setAttribute("x",ringsX);
 	rings.setAttribute("y",ringsY);
-	rings.setAttribute("style", "display: block;")
+	rings.setAttribute("style", "display: block;");
 	showDetails(accidentsList.children[i]);
 }
 
