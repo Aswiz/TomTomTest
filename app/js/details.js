@@ -44,9 +44,17 @@ function hideDetails(selectedLiElement) {
 	changeIconToArrow(iconSpan);
 }
 
-function changeState() {
-	if (this.classList.contains("mdc-list-item_selected"))
-		hideDetails(this);
-	else
-		showDetails(this);
-}
+// function changeState() {
+// 	var accidentsList = document.getElementById("accidentsList"),
+// 			countLiElements = accidentsList.children.length;
+//
+// 	for (var i = 0; i < countLiElements; i++)
+// 	{
+// 		hideDetails(accidentsList.children[i]);
+// 	}
+//
+// 	if (!this.classList.contains("mdc-list-item_selected"))
+// 	{
+// 		showDetails(this);
+// 	}
+// }

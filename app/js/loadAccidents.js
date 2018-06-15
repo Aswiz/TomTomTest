@@ -35,8 +35,8 @@ function createLiElements(element) {
 	var ulElement = document.getElementById("accidentsList");
 	var liElement;
 	sortingAccidentList(element);
-	element.forEach(function(elementI){
-		liElement = createLiElement(elementI);
+	element.forEach(function(elementI, i){
+		liElement = createLiElement(elementI, i, element.length-1);
 		ulElement.insertBefore(liElement,ulElement.firstChild);
 	});
 }
@@ -51,7 +51,7 @@ function deleteLiElements() {
 	}
 }
 
-function createLiElement(element) {
+function createLiElement(element, i, count) {
 
 	var typeLiSpan = typeAccidents(element);
 	liElement = document.createElement('li');
@@ -69,6 +69,8 @@ function createLiElement(element) {
 			"<span class=\"mdc-list-item__secondary-text secondary-text__hidden\">Magnitude: " + element.magnitude + "</span>\n" +
 			"</span>\n" +
 			"<span class=\"mdc-list-item__meta material-icons md-36\" aria-hidden=\"true\">arrow_drop_down</span>";
-	liElement.onclick = changeState;
+	liElement.onclick = function () {
+		changeColorSvgIcons(count-i);
+	};
 	return liElement;
 }
