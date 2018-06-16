@@ -8,6 +8,7 @@ function showPage() {
 	document.getElementById("loader").style.display = "none";
 	document.getElementById("main-header").style.display = "block";
 	document.getElementById("app").style.display = "block";
+	document.getElementById("footer").style.display = "block";
 }
 
 function draw(accidents) {

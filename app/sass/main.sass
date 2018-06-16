@@ -54,12 +54,47 @@ body
 .svgIconUnSelected
 	fill: #DF1A26
 .svgIconUnSelected:hover
-		cursor: pointer
-		fill: #F91A29
+	cursor: pointer
+	fill: #F91A29
 .svgIconSelected
 	fill: #02A2A5
-
 .svgIconPath:hover
 	fill: #F91A29
+
+
+.footer
+	width: 100%
+	background-color: #555555
+	padding: 10px
+	&__container
+		width: 75%
+		margin: auto
+		padding: 25px
+	&__text
+		font-size: 0.9rem
+		text-align: center
+		color: #FFFFFF
+		margin: 0
+		margin-top: 5px
+	&__social
+		display: flex
+		justify-content: center
+
+
+.social_icons
+	display: inline-block
+	width: 30px
+	height: 30px
+	margin-right: 10px
+	vertical-align: middle
+	background-image: url("../img/icons.png")
+.icon_github
+	background-position: -2px -2px
+.icon_in
+	background-position: -34px -2px
+.icon_mail
+	background-position: -66px -2px
+
+
 
 @import "media" // Always in the bottom
