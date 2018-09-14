@@ -1,8 +1,8 @@
-setInterval(function(){
+setInterval(function () {
 	var rings = document.getElementById('rings');
 	rings.setAttribute("style", "display: none;");
 	loadAccidents();
-},120000);
+}, 120000);
 
 function showPage() {
 	document.getElementById("loader").style.display = "none";
@@ -25,13 +25,13 @@ function draw(accidents) {
 
 
 function test() {
-	window.addEventListener("load", function(event) {
+	window.addEventListener("load", function (event) {
 		SvgMap();
 		loadAccidents();
 
 		setTimeout(function () {
 			showPage();
-		},500);
+		}, 500);
 	});
 }
 test();

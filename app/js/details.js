@@ -1,6 +1,5 @@
 function removeHideClass(element) {
-	for ( var i = 3; i < element.childNodes.length; i = i + 2 )
-	{
+	for (var i = 3; i < element.childNodes.length; i = i + 2) {
 		element.childNodes[i].classList.remove("secondary-text__hidden");
 	}
 }
@@ -13,7 +12,7 @@ function changeIconToClear(spanIconElement) {
 
 function showDetails(selectedLiElement) {
 	var hiddenSpans = selectedLiElement.childNodes[2],
-			iconSpan = selectedLiElement.childNodes[4];
+		iconSpan = selectedLiElement.childNodes[4];
 
 	addSelectedClass(selectedLiElement);
 	removeHideClass(hiddenSpans);
@@ -23,8 +22,7 @@ function showDetails(selectedLiElement) {
 //
 
 function addHideClass(element) {
-	for ( var i = 3; i < element.childNodes.length; i = i + 2 )
-	{
+	for (var i = 3; i < element.childNodes.length; i = i + 2) {
 		element.childNodes[i].classList.add("secondary-text__hidden");
 	}
 }
@@ -37,7 +35,7 @@ function changeIconToArrow(spanIconElement) {
 
 function hideDetails(selectedLiElement) {
 	var hiddenSpans = selectedLiElement.childNodes[2],
-			iconSpan = selectedLiElement.childNodes[4];
+		iconSpan = selectedLiElement.childNodes[4];
 
 	removeSelectedClass(selectedLiElement);
 	addHideClass(hiddenSpans);
